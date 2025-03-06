@@ -9,6 +9,11 @@ const prisma = new PrismaClient();
 app.use(express.json());
 app.use(cors());
 
+//home route
+app.get("/", (req, res) => {
+  res.json("welcome to the server");
+});
+
 /**
  * Add School API
  * Endpoint: /addSchool
